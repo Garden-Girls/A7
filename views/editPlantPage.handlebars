@@ -32,7 +32,7 @@
 
     
       
-       
+   <!--    
   <div class='journal'>
     
     <div class="top">
@@ -64,15 +64,27 @@
         <img src="images/shrubs-button.svg">
       </a>
       <p id='transplant'>Transplant</p>
-      
-      
-
-
-
-
-  
-
   </div>
+-->
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/addingPlant">
+        <div class="form-group">
+          <label for="date">Start Date:</label>
+          <input type="date" class="form-control" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Nickname:</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant"></input>
+      </form>
+    </div>
+
+    <p>add reminder</p>
+    <p>add species based on prev page</p>
+    <p>calculate age -- how to update day to day?</p>
 
 
 

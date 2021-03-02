@@ -31,7 +31,8 @@ var loginPage = require('./routes/loginPage');
 var addPhoto = require('./routes/addPhoto');
 
 //adding forms
-var add = require('./routes/add')
+var add = require('./routes/add');
+var addingPlant = require('./routes/addingPlant');
 
 // Example route
 // var user = require('./routes/user');
@@ -89,6 +90,7 @@ app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum', dayEntry.view);
 app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
 
 app.get('/add', add.addEntry);
+app.get('/addingPlant', addingPlant.addPlant);
 //end testing
 
 http.createServer(app).listen(app.get('port'), function(){
