@@ -88,6 +88,7 @@ app.get('/addPhoto', addPhoto.view);
 //testing diff entries
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum', dayEntry.view);
 app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
+app.get('/plant/:plantName', froggy.view);
 
 app.get('/add', add.addEntry);
 app.get('/addingPlant', addingPlant.addPlant);

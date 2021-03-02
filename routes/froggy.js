@@ -1,6 +1,10 @@
-var data = require('../data.json');
+var data = require('../myPlantsData.json');
 
 exports.view = function(req, res){
-  res.render('froggy', data);
+	var viewPlant = req.params.plantName;
+
+  res.render('froggy', {
+  	"nickname": viewPlant
+  });
 };
 

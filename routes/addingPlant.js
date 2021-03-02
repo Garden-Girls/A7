@@ -15,7 +15,7 @@ exports.addPlant = function(request, response) { 
 
 	newEntry = {
 		"pic": "edit-photo-button.svg",
-		"nickname": request.query.nickname,
+		"nickname": request.query.name,
 		"species": "placeholder",
 		"age": ageDays,
 		"watering": "Once a week",

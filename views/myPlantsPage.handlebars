@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/myPlantsStyle.css">
 </head>
 <body>
 
 
-  <div class="page-container">
+  <div class="container">
 
-    <div class= "title">
+    <div class="header">
       <img id='left-leaf' src="images/small-leaf.svg">
-      <p> MY PLANTS </p>
+      <p>MY PLANTS</p>
       <img id='right-leaf' src="images/small-leaf.svg">
     </div>
 
@@ -33,11 +33,17 @@
     {{#each Plants}}
         <div class="a-plant">
           <!--make clickable -->
-            <img src="/images/{{pic}}" />
+            <a href="/plant/{{nickname}}" class="fill-div">
+              <div id="plantIMG">
+            <img src="/images/{{pic}}"/>
+              </div>
+              <div id="plantINFO">
             <h2>{{nickname}}</h2>
             <p>Species: {{species}}</p>
             <p>Age: {{age}}</p>
             <p>Watering: {{watering}}</p>
+              </div>
+            </a>
         </div>
     {{/each}}
 
