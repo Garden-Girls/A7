@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <style>textarea{resize:none;}</style>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='js/bootstrap.js'></script>
+
+  <link rel="stylesheet" href="css/plantStyle.css">
+  
+</head>
+<body>
+
+<!-- 
+  CAN'T ADD PHOTOS
+-->
+  <div class="container">
+    <div class="header">
+      <img id='left-leaf' src="images/small-leaf.svg">
+      <p> MY PLANTS </p>
+      <img id='right-leaf' src="images/small-leaf.svg">
+    </div>
+
+    <div id="prevPage">
+      <a href='/myPlantsPage'>
+      <img src='images/back-button.svg'>
+      </a>
+    </div>
+
+    <div id="plantID">
+      <img id='journalPhoto' src="images/froggy.svg">
+      <h2>Froggy</h2>
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/add">
+      <h3>Add Journal Entry</h3>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+          <p>How is your plant today?</p>
+          <label>
+            <input type="radio" name="buttonGroup" value="bad" id="bad" checked="checked">
+            <img src="images/bad-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="okay" id="okay">
+            <img src="images/normal-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="good" id="good">
+            <img src="images/good-face.svg">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Notes:</label>
+          <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add entry"></input>
+      </form>
+    </div>
+
+    <div class="bottom">
+      <p id='watering-reminder'>Watering Reminder</p>
+
+      <form id="pick-time" action="/action_page.php">
+        <label for="reminder-time" class='comments'></label>
+        <select name="time" id="time">
+          <optgroup label="Morning">
+            <option value="12-6">12am-6am</option>
+            <option value="6-12">6am-12pm</option>
+          </optgroup>
+
+        <optgroup label="Afternoon">
+              <option value="12-3">12pm-3pm</option>
+              <option value="3-6">3pm-6pm</option>
+            </optgroup>
+
+        <optgroup label="Night">
+              <option value="6-9">6pm-9pm</option>
+              <option value="9-12">9pm-12pm</option>
+            </optgroup>
+        </select>
+      </form>
+      <img id='bell' src="images/bell.svg">
+    </div>
+  <!--
+  {{#each Froggy}}
+    <div class="entry container">
+      <p>{{date}}</p>
+      <p>{{text}}</p>
+      <p>{{status}}</p>
+    </div>
+    <hr>
+  {{/each}}
+-->
+  
+
+    <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href="/">
+              <img src="images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+
+<script src='js/myPlants.js'></script>
+<script type="app.js"></script>
+</body>
+</html>
