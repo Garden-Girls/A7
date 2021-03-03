@@ -29,32 +29,6 @@
       </div>
 
       <div id="photos">
-        <!--
-        <div class="slide">
-          <img src="/images/froggy.svg" />
-          <p>9:30 AM</p>
-        </div>
-        <div class="slide">
-          <img src="/images/emily.svg" />
-          <p>11:30 AM</p>
-        </div>
-        <div class="slide">
-          <img src="/images/bert.svg" />
-          <p>3:30 PM</p>
-        </div>
-        <div class="slide">
-          <img src="/images/froggy.svg" />
-          <p>6:30 PM</p>
-        </div>
-        <div class="slide">
-          <img src="/images/emily.svg" />
-          <p>8:30 PM</p>
-        </div>
-        <div class="slide">
-          <img src="/images/bert.svg" />
-          <p>10:30 PM</p>
-        </div>
-      -->
         
         {{#each slides}}
           <div class="slide">
@@ -65,29 +39,39 @@
       
       </div>
 
-      <h3>Plant Condition</h3>
-      <div class="moods">
-        <input type="radio" name="buttonGroup" value="one" id="one" checked="checked"><label for="one">Bad</label>
-        <input type="radio" name="buttonGroup" value="two" id="two"><label for="two">Okay</label>
-        <input type="radio" name="buttonGroup" value="three" id="three"><label for="three">Good</label>
-        <!--<div class="face">
-          <img src="/images/bad-face.svg" />
-        </div>
-        <div class="face">
-          <img src="/images/normal-face.svg" />
-        </div>
-        <div class="face">
-          <img src="/images/good-face.svg" />
-        </div>
-      -->
-      </div>
+      <div class="input">
+      <!--<form id="addEntryForm" role="form" method="get" action="/editEntry">-->
+      <form id="addEntryForm" role="form" method="get">
+        <div class="form-group">
+          <h3>Plant Condition</h3>
+          <label>
+            <input type="radio" name="buttonGroup" value="bad" id="bad" checked="checked">
+            <img src="/images/bad-face.svg">
+          </label>
 
-      <h3>Notes</h3>
-      <div class="text">
-        <p>{{text}}</p>
-      </div>
+          <label>
+            <input type="radio" name="buttonGroup" value="okay" id="okay">
+            <img src="/images/normal-face.svg">
+          </label>
 
-      <button type="button" id="editing">Edit</button>
+          <label>
+            <input type="radio" name="buttonGroup" value="good" id="good">
+            <img src="/images/good-face.svg">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3>Notes</h3>
+          <!-- <label for="description">Notes:</label> -->
+          <input type="text" class="form-control" id="description" name="description" value={{text}}>
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Save changes"></input>
+
+      </form>
+    </div>
+
+
+      </div>
 
       <img id='bottom-rectangle' src="/images/bottom-rectangle.svg">
 

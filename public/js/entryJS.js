@@ -10,7 +10,17 @@
 	});
 }*/
 
-document.querySelector("#editing").addEventListener("click", function() {
-	console.log("editing");
-	document.querySelector(".text").setAttribute("contenteditable", "true");
-})
+
+/*var mood = document.querySelector('input[name="buttonGroup"]:checked');
+mood = mood.value;
+
+console.log(mood);*/
+
+/*$('input:radio').each(function() {
+	if($(this).is(':checked')) {
+		console.log(this.value);
+	}
+	else {
+		console.log("unchecked");
+	}
+});*/

@@ -99,6 +99,7 @@ h3 {
 	text-align: center;
 }
 
+/*
 .moods {
 	width: 80%;
 	margin: auto;
@@ -112,6 +113,7 @@ input[type='radio'][name='buttonGroup'] {
 	display: none;
 }
 
+
 label {
 	display: inline-block;
 	padding: 3px;
@@ -122,7 +124,7 @@ label {
 	text-align: center;
 }
 
-input[type='radio'][name='buttonGroup']:checked + label {background-color: yellow;}
+input[type='radio'][name='buttonGroup']:checked + label {background-color: yellow;} */
 /*.moods .face {
 	border: 3px outset white;
 	display: flex;
