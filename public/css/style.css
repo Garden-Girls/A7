@@ -43,7 +43,7 @@
 	width: 266.72px;
 	height: 62px;
 	left: 54px;
-	top: 538px;}
+	top: 518px;}
 
 #left-leaf{
 	position: absolute;
@@ -921,3 +921,10 @@ p #subtitle{
 	background-color: blue;
 	cursor: pointer;
 }
+
+.view-calendar-button{
+	position: absolute;
+	width: 266.72px;
+	height: 62px;
+	left: 54px;
+	top: 600px;}

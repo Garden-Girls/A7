@@ -24,18 +24,14 @@
     </div>
 
 
-    <div class='edit-button'>
-      <a id='edit-button'>
-        <img src="images/edit-button.svg">
-    </a></div>
-      
-
     {{#each Plants}}
         <div class="a-plant">
           <!--make clickable -->
+        
             <a href="/plant/{{nickname}}" class="fill-div">
+
               <div id="plantIMG">
-            <img src="/images/{{pic}}"/>
+            <img src="/images/{{nickname}}.svg"/>
               </div>
               <div id="plantINFO">
             <h2>{{nickname}}</h2>
@@ -44,6 +40,7 @@
             <p>Watering: {{watering}}</p>
               </div>
             </a>
+
         </div>
     {{/each}}
 

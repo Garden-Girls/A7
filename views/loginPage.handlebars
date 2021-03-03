@@ -6,6 +6,9 @@
 
 	<title>Login</title>
 	<link rel="stylesheet" href="css/login.css">
+	
+	{{> facebook}}
+	<script src="js/facebook.js"></script>
 </head>
 <body>
 
@@ -22,18 +25,20 @@
 		</div>
 
 		<hr>
-		<h2>Sign In</h2>
-		<div class="input-container">
-			<div>
+		<div class="jumbotron">
+		<h1 id='name'>Sign In</h1>
+		<p class="facebookLogin">
+			
 				<input type="text" placeholder="Username">
-			</div>
-			<div>
+			
+			
 				<input type="password" placeholder="Password">
-			</div>
-		</div>
-			<div>
-				<button type="button" onclick="window.location.href='/index'">Login</button>
-			</div>
+			<button type="button" onclick="window.location.href='/index'">Login</button>
+		</p>
+					
+		<p>
+			<fb:login-button class="button" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+		</p>
 	</div>
 
 <script type="app.js"></script>

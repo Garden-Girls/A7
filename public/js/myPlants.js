@@ -20,3 +20,7 @@ function normal(){
 	var good = document.getElementById('good-face');
 	bad.style.visibility= 'hidden';
 	good.style.visibility='hidden';}
+
+
+
+

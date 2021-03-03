@@ -1,7 +1,7 @@
 {
 	"Plants": [
 		{	
-			"pic": "bert.svg",
+			"pic": "stripes.svg",
 			"nickname": "Stripes",
 			"species": "Philodendron",
 			"age": "1",
@@ -9,7 +9,7 @@
 			"start": "01/01/2021"
 		},
 		{	
-			"pic": "bert.svg",
+			"pic": "froggy.svg",
 			"nickname": "Froggy",
 			"species": "Nephthytis",
 			"age": "1",
@@ -17,7 +17,7 @@
 			"start": "01/01/2021"
 		},
 		{	
-			"pic": "bert.svg",
+			"pic": "emily.svg",
 			"nickname": "Emily",
 			"species": "Begonia",
 			"age": "1",
