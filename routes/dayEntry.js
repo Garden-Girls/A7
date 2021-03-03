@@ -14,10 +14,27 @@ exports.view = function(req, res) {
 
 	var dateToShow = monthToShow + "/" + dayToShow + "/" + yearToShow;
 
+	var ind = -1;
+
+
+	for (var i = 0; i < data[plantToShow].length; i++) {
+		if (data[plantToShow][i].date == dateToShow) {
+			ind = i;
+		}
+	}
+
+	var forSlides = [];
+	var forText = "";
+
+	if (ind != -1) {
+		forSlides = data[plantToShow][ind].slides;
+		forText = data[plantToShow][ind].text;
+	}
+
 	res.render('dayEntry', {
 		"plant": plantToShow,
 		"date": dateToShow,
-		"slides":data.Froggy[1].slides,
-		"text":data.Froggy[1].text
+		"slides": forSlides,
+		"text": forText
 	});
 };
