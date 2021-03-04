@@ -29,6 +29,7 @@ var filteredHerb = require('./routes/filteredHerb');
 var filteredFern = require('./routes/filteredFern');
 var loginPage = require('./routes/loginPage');
 var addPhoto = require('./routes/addPhoto');
+var basilInfoPage = require('./routes/basilInfoPage');
 
 //adding forms
 var add = require('./routes/add');
@@ -80,7 +81,7 @@ app.get('/filteredHerb',filteredHerb.view);
 app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
-
+app.get('/basilInfoPage',basilInfoPage.view);
 
 // Example route
 // app.get('/users', user.list);
