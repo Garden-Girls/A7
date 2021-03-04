@@ -24,7 +24,7 @@
     </div>
 
 
-    {{#each Plants}}
+    {{#Plants}}
         <div class="a-plant">
 
             <a href="/plant/{{nickname}}" class="fill-div">
@@ -36,14 +36,15 @@
               <div id="plantINFO">
                 <h2>{{nickname}}</h2>
                 <p>Species: {{species}}</p>
-                <p>Age: {{age}} *can't use autoAge?</p>
+                <p>Age: {{age}} {{autoAge}} days old</p>
+                <h5>** can't insert autoAge, something wrong w/ the render in js **</h5>
                 <p>Watering: {{watering}}</p>
               </div>
 
             </a>
 
         </div>
-    {{/each}}
+    {{/Plants}}
 
 
 <div class='navigation'>

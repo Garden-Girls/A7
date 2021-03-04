@@ -24,8 +24,7 @@
 
       <div id="photoHeader">
         <h3>Your photos for {{date}}</h3>
-        <!-- <button type="button" id="addPhoto">+</button> -->
-        <a href="/addPhoto/{{plant}}/{{date}}" id="addPhoto">+</a>
+        <!-- <a href="/addPhoto/{{plant}}/{{date}}" id="addPhoto">+</a> -->
       </div>
 
       <div id="photos">
@@ -33,10 +32,26 @@
         {{#each slides}}
           <div class="slide">
             <img src="/images/{{image}}" />
-            <p>{{caption}}</p>
+            <!--<p>{{caption}}</p>-->
           </div>
         {{/each}}
       
+      </div>
+
+      <div id="addPhoto+Cap">
+        <form id="addEntryForm" role="form" method="get">
+          <div class="form-group">
+            <label for="img">Add photo</label>
+            <input type="file" id="img" name="img" accept=".svg" required>
+          </div>
+
+          <!--<div class="form-group">
+            <h3>Caption</h3>
+            <input type="text" class="form-control" id="caption" name="caption">
+          </div>-->
+
+          <input type="submit" id="subPhoto" class="btn btn-default" value="Add photo"></input>
+        </form>
       </div>
 
       <div class="input">
@@ -65,7 +80,7 @@
           <!-- <label for="description">Notes:</label> -->
           <input type="text" class="form-control" id="description" name="description" value={{text}}>
         </div>
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Save changes"></input>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Update entry"></input>
 
       </form>
     </div>

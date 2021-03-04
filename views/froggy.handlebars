@@ -30,10 +30,10 @@
     </div>
 
     <div id="plantID">
-      <img id='journalPhoto' src="/images/{{nickname}}.svg">
+      <img id='journalPhoto' src="/images/{{pic}}">
       <h2>{{nickname}}</h2>
-      <h4>Placeholder species</h4>
-      <h4>Placeholder age</h4>
+      <h4>{{species}}</h4>
+      <h4>{{age}} days old</h4>
     </div>
 
     <div class="input">
@@ -41,8 +41,19 @@
       <h3>Add Journal Entry</h3>
         <div class="form-group">
           <label for="date">Date:</label>
-          <input type="date" class="form-control" id="date" name="date" max="2021-04-01">
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
         </div>
+
+          <div class="form-group">
+            <label for="img">Add photo</label>
+            <input type="file" id="img" name="img" accept=".svg" required>
+            <div class="hover">! = Please go to Calendar to add more than one photo for an entry.</div>
+          </div>
+
+          <!--<div class="form-group">
+            <h3>Caption</h3>
+            <input type="text" class="form-control" id="caption" name="caption">
+          </div>-->
 
         <div class="form-group">
           <p>How is your plant today?</p>
@@ -108,6 +119,7 @@
       <p>! since url changes after adding, handlebars doesn't work</p>
       <p>dates limited to today and prev, but maybe only today?</p>
       <p>hard coded to add to Froggy; adding doesn't work</p>
+      <p>atm, only way photo can be added is during plant creation</p>
     </div>
   <!-- TEST IF DATA.JSON IS ADDED TO
   {{#each Froggy}}
