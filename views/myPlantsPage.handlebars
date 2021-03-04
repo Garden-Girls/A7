@@ -26,19 +26,20 @@
 
     {{#each Plants}}
         <div class="a-plant">
-          <!--make clickable -->
-        
+
             <a href="/plant/{{nickname}}" class="fill-div">
 
               <div id="plantIMG">
-            <img src="/images/{{nickname}}.svg"/>
+                <img src="/images/{{nickname}}.svg"/>
               </div>
+
               <div id="plantINFO">
-            <h2>{{nickname}}</h2>
-            <p>Species: {{species}}</p>
-            <p>Age: {{age}}</p>
-            <p>Watering: {{watering}}</p>
+                <h2>{{nickname}}</h2>
+                <p>Species: {{species}}</p>
+                <p>Age: {{age}} *can't use autoAge?</p>
+                <p>Watering: {{watering}}</p>
               </div>
+
             </a>
 
         </div>

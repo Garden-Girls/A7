@@ -72,7 +72,7 @@ app.get('/emily',emily.view);
 app.get('/search', search.view);
 app.get('/addPage', addPage.view);
 app.get('/filtered',filtered.view);
-app.get('/editPlantPage',editPlantPage.view);
+app.get('/editPlantPage',editPlantPage.view); //no species
 app.get('/orchidInfopage',orchidInfopage.view);
 app.get('/lavenderInfopage',lavenderInfopage.view);
 app.get('/rosemaryInfopage',rosemaryInfopage.view);
@@ -89,7 +89,9 @@ app.get('/addPhoto', addPhoto.view);
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum', dayEntry.view);
 app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
 app.get('/plant/:plantName', froggy.view);
+app.get('/editPlantPage/:species', editPlantPage.view);
 
+//adding to JSON
 app.get('/add', add.addEntry);
 app.get('/addingPlant', addingPlant.addPlant);
 //end testing

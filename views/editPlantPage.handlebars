@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='/js/bootstrap.js'></script>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -11,21 +13,21 @@
   <div class="page-container">
 
     <div class= "title">
-      <img id='left-leaf' src="images/small-leaf.svg">
+      <img id='left-leaf' src="/images/small-leaf.svg">
       <p> MY PLANTS </p>
-      <img id='right-leaf' src="images/small-leaf.svg">
+      <img id='right-leaf' src="/images/small-leaf.svg">
     </div>
     </div>
     
     <div class="back-button">
       <a id='back-button' href='/filtered'>
-      <img src='images/back-button.svg'>
+      <img src='/images/back-button.svg'>
     </a>
     </div>
 
       <div class="ok-button">
       <a id='ok-button' href='/addPage'>
-      <img src='images/ok-button.svg'>
+      <img src='/images/ok-button.svg'>
     </a>
     </div>
 
@@ -69,15 +71,39 @@
 
     <div class="input">
       <form id="addEntryForm" role="form" method="get" action="/addingPlant">
-        <div class="form-group">
-          <label for="date">Start Date:</label>
-          <input type="date" class="form-control" id="date" name="date">
-        </div>
-
+        
         <div class="form-group">
           <label for="name">Nickname:</label>
           <input type="text" class="form-control" id="name" name="name">
         </div>
+
+        <h3>Species: {{species}}</h3>
+
+        <div class="form-group">
+          <label for="date">Start Date:</label>
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01">
+        </div>
+
+        <h4>Watering Reminder</h4>
+        <div class="form-group">
+          <label for="remind-time">Time of Day:</label>
+          <input type="time" class="form-control" id="remind-time" name="remind-time">
+        </div>
+
+        <h4>How often:</h4>
+        <div class="form-group">
+          <label for="Every day">Every day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every day">
+
+          <label for="Every other day">Every other day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every other day">
+
+          <label for="Every week">Every week</label>
+          <input type="radio" class="remind-per" id="Every week" name="remind-per" value="Every week">
+
+          <h5>add photo?</h5>
+        </div>
+
         <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant"></input>
         <!-- doesn't display
         <label for="img">Select image:</label>
@@ -87,22 +113,21 @@
       </form>
     </div>
 
-    <p>add reminder</p>
     <p>add species based on prev page</p>
-    <p>calculate age -- how to update day to day?</p>
+    <p>calculate age -- how to update day to day? if can calculate age when myPlants is generated instead, fixed</p>
 
 
 
 <div class='navigation'>
 
-  <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
+  <img id='bottom-rectangle' src="/images/bottom-rectangle.svg">
 
   <a id='home-button' href='/index'>
-      <img src="images/home-button.svg">
+      <img src="/images/home-button.svg">
   </a>
 
   <a href="/calendar">
-    <img id='calendar-button' src="images/calendar-button.svg">
+    <img id='calendar-button' src="/images/calendar-button.svg">
   </a>
 
 </div>
@@ -111,8 +136,7 @@
   </div>
 
 
-
+<script src='/js/newPlant.js'></script>
 <script type="app.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

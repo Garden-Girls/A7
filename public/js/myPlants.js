@@ -1,4 +1,4 @@
-function Okay(){
+/*function Okay(){
 	window.location.reload()
 }
 
@@ -19,7 +19,13 @@ function normal(){
 	var bad = document.getElementById("bad-face");
 	var good = document.getElementById('good-face');
 	bad.style.visibility= 'hidden';
-	good.style.visibility='hidden';}
+	good.style.visibility='hidden';}*/
+
+var today = new Date().toISOString().split('T')[0];
+console.log(today);
+document.getElementsByName("date")[0].setAttribute('max', today);
+
+document.getElementsByName("start-date")[0].setAttribute('max', today);
 
 
 

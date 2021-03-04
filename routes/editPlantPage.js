@@ -1,4 +1,7 @@
 exports.view = function(req, res){
-  res.render('editPlantPage');
+	var addedSpecies = req.params.species;
+  res.render('editPlantPage', {
+  	"species": addedSpecies
+  });
 };
 

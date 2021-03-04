@@ -6,9 +6,9 @@
   <style>textarea{resize:none;}</style>
 
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-  <script src='js/bootstrap.js'></script>
+  <script src='/js/bootstrap.js'></script>
 
-  <link rel="stylesheet" href="css/plantStyle.css">
+  <link rel="stylesheet" href="/css/plantStyle.css">
   
 </head>
 <body>
@@ -32,6 +32,8 @@
     <div id="plantID">
       <img id='journalPhoto' src="/images/{{nickname}}.svg">
       <h2>{{nickname}}</h2>
+      <h4>Placeholder species</h4>
+      <h4>Placeholder age</h4>
     </div>
 
     <div class="input">
@@ -39,7 +41,7 @@
       <h3>Add Journal Entry</h3>
         <div class="form-group">
           <label for="date">Date:</label>
-          <input type="date" class="form-control" id="date" name="date">
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01">
         </div>
 
         <div class="form-group">
@@ -68,34 +70,44 @@
       </form>
     </div>
 
-    <div class="bottom">
-      <p id='watering-reminder'>Watering Reminder</p>
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/placeholder">
+      <h3>Plant Info</h3>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" class="form-control" id="start-date" name="start-date" max="2021-04-01">
+        </div>
 
-      <form id="pick-time" action="/action_page.php">
-        <label for="reminder-time" class='comments'></label>
-        <select name="time" id="time">
-          <optgroup label="Morning">
-            <option value="12-6">12am-6am</option>
-            <option value="6-12">6am-12pm</option>
-          </optgroup>
+        <h4>Watering Reminder</h4>
+        <div class="form-group">
+          <label for="remind-time">Time of Day:</label>
+          <input type="time" class="form-control" id="remind-time" name="remind-time">
+        </div>
 
-        <optgroup label="Afternoon">
-              <option value="12-3">12pm-3pm</option>
-              <option value="3-6">3pm-6pm</option>
-            </optgroup>
+        <h4>How often:</h4>
+        <div class="form-group">
+          <label for="Every day">Every day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every day">
 
-        <optgroup label="Night">
-              <option value="6-9">6pm-9pm</option>
-              <option value="9-12">9pm-12pm</option>
-            </optgroup>
-        </select>
+          <label for="Every other day">Every other day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every other day">
+
+          <label for="Every week">Every week</label>
+          <input type="radio" class="remind-per" id="Every week" name="remind-per" value="Every week">
+
+          <h5>leaving nickname, species, and photo unchangable rn</h5>
+        </div>
+
+        
+        <input type="submit" id="submitBtn2" class="btn btn-default" value="Save Changes"></input>
       </form>
-      <img id='bell' src="/images/bell.svg">
-      <br>
+    </div>
+
+    <div class="bottom">
       <img id='remove' src="/images/remove.svg">
-      <p>add plant specific data like start date, age, etc.</p>
       <p>! since url changes after adding, handlebars doesn't work</p>
-      <p>add limit to dates possible to be selected</p>
+      <p>dates limited to today and prev, but maybe only today?</p>
+      <p>hard coded to add to Froggy; adding doesn't work</p>
     </div>
   <!-- TEST IF DATA.JSON IS ADDED TO
   {{#each Froggy}}
@@ -127,7 +139,7 @@
   </div>
 
 
-<script src='js/myPlants.js'></script>
+<script src='/js/myPlants.js'></script>
 <script type="app.js"></script>
 </body>
 </html>
