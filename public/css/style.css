@@ -928,3 +928,10 @@ p #subtitle{
 	height: 62px;
 	left: 54px;
 	top: 600px;}
+
+	#close-button{
+	position: absolute;
+	width: 59px;
+	height: 34px;
+	left: 302px;
+	top: 83px;}

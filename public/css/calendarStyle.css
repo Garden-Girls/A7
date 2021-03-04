@@ -49,7 +49,7 @@
 /*calendar*/
 .calendar {
 	width: 85%;
-	height: 58.5%;
+	height: 63.5%;
 	outline: 2px solid black;
 }
 
@@ -138,24 +138,16 @@ button {
 	background-color: yellow;
 }
 
-#calendar-button{width: 46px;
-	height: 44px;
-	top:-50px;
-	left:80px;}
-
-#home-button{
-	position: absolute;
-	width:46px;
-	height: 37.82px;
-	top: -50px;
-	left: -80px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+#calendar-button {
+    position: absolute;
+    width: 46px;
+    left: 67px;
+    top: 20px;
+}
+#home-button {
+    position: absolute;
+    left: -133px;
+    height: 44px;
+    top: 22px;
 }
 
-#bottom-rectangle{
-	position: relative;
-	width: 375px;
-	height: 58px;
-	left: 0px;
-	top: 609px;
-}

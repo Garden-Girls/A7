@@ -83,6 +83,9 @@ app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
 app.get('/basilInfoPage',basilInfoPage.view);
 
+
+
+
 // Example route
 // app.get('/users', user.list);
 
@@ -92,6 +95,7 @@ app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
 app.get('/plant/:plantName', froggy.view);
 app.get('/editPlantPage/:species', editPlantPage.view);
 
+
 //adding to JSON
 app.get('/add', add.addEntry);
 app.get('/addingPlant', addingPlant.addPlant);
@@ -100,3 +104,5 @@ app.get('/addingPlant', addingPlant.addPlant);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+

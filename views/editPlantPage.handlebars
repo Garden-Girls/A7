@@ -6,6 +6,12 @@
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
   <script src='/js/bootstrap.js'></script>
   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/all.css">
+   <link rel="stylesheet" href="/css/editPlantPage.css">
+
+
+    
+</script>
 </head>
 <body>
 
@@ -14,25 +20,30 @@
 
     <div class= "title">
       <img id='left-leaf' src="/images/small-leaf.svg">
-      <p> MY PLANTS </p>
+      <p> Add Plants </p>
       <img id='right-leaf' src="/images/small-leaf.svg">
     </div>
     </div>
     
     <div class="back-button">
-      <a id='back-button' href='/filtered'>
+      <a id='back-button' href='javascript:window.history.back()'>
       <img src='/images/back-button.svg'>
     </a>
     </div>
 
-      <div class="ok-button">
-      <a id='ok-button' href='/addPage'>
-      <img src='/images/ok-button.svg'>
+      <div class="close-button">
+      <a id='close-button' href='javascript:window.history.back()'>
+      <img src='/images/close-button.svg'>
     </a>
     </div>
 
 
-    
+    <div class="image">
+      <img id="flower" src="/images/add-photo.svg" onclick="imagefun()">
+    </div>
+
+
+
       
    <!--    
   <div class='journal'>
@@ -72,36 +83,39 @@
     <div class="input">
       <form id="addEntryForm" role="form" method="get" action="/addingPlant">
         
-        <div class="form-group">
+        <div class="form-group" id='nickname'>
           <label for="name">Nickname:</label>
           <input type="text" class="form-control" id="name" name="name">
         </div>
 
-        <h3>Species: {{species}}</h3>
 
-        <div class="form-group">
+        <label id='species' for="name">Species: {{species}}</label>
+
+        <div id="start-date" class="form-group">
           <label for="date">Start Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01">
         </div>
 
-        <h4>Watering Reminder</h4>
-        <div class="form-group">
+        
+        <div id="watering" class="form-group">
+          <h4>Watering Reminder</h4>
+        <div id='setTime'>  
           <label for="remind-time">Time of Day:</label>
-          <input type="time" class="form-control" id="remind-time" name="remind-time">
+          <input type="time" class="form-control" id="remind-time" name="remind-time"></div>
         </div>
 
-        <h4>How often:</h4>
-        <div class="form-group">
+        
+        <div id = "how-often" class="form-group">
+          <h4>How often:</h4>
           <label for="Every day">Every day</label>
           <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every day">
-
+          <br>
           <label for="Every other day">Every other day</label>
           <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every other day">
-
+          <br>
           <label for="Every week">Every week</label>
           <input type="radio" class="remind-per" id="Every week" name="remind-per" value="Every week">
 
-          <h5>add photo?</h5>
         </div>
 
         <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant"></input>

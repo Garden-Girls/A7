@@ -2,6 +2,7 @@
 	margin: auto 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 .container {
 	width: 100%;
@@ -50,4 +51,19 @@ a.fill-div {
 	font-size: 30px;
 	line-height: 38px;
 	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 15px;
+}
+
+.a-plant {
+    background-color: #3ba7207a;
+    width: 100%;
+    outline: 2px solid darkgreen;
+    height: 175px;
 }
