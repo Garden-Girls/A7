@@ -37,7 +37,7 @@
     </div>
 
     <div class="input">
-      <form id="addEntryForm" role="form" method="get" action="/add">
+      <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
       <h3>Add Journal Entry</h3>
         <div class="form-group">
           <label for="date">Date:</label>
@@ -46,7 +46,7 @@
 
           <div class="form-group">
             <label for="img">Add photo</label>
-            <input type="file" id="img" name="img" accept=".svg" required>
+            <input type="file" id="img" name="img" accept=".svg">
             <div class="hover">! = Please go to Calendar to add more than one photo for an entry.</div>
           </div>
 
@@ -56,7 +56,7 @@
           </div>-->
 
         <div class="form-group">
-          <p>How is your plant today?</p>
+          <p>How is your plant?</p>
           <label>
             <input type="radio" name="buttonGroup" value="bad" id="bad" checked="checked">
             <img src="/images/bad-face.svg">
@@ -121,7 +121,7 @@
       <p>hard coded to add to Froggy; adding doesn't work</p>
       <p>atm, only way photo can be added is during plant creation</p>
     </div>
-  <!-- TEST IF DATA.JSON IS ADDED TO
+
   {{#each Froggy}}
     <div class="entry container">
       <p>{{date}}</p>
@@ -130,7 +130,7 @@
     </div>
     <hr>
   {{/each}}
--->
+
 
   
 

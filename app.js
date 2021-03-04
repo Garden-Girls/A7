@@ -32,7 +32,7 @@ var addPhoto = require('./routes/addPhoto');
 var basilInfoPage = require('./routes/basilInfoPage');
 
 //adding forms
-var add = require('./routes/add');
+//var add = require('./routes/add');
 var addingPlant = require('./routes/addingPlant');
 
 // Example route
@@ -93,7 +93,8 @@ app.get('/plant/:plantName', froggy.view);
 app.get('/editPlantPage/:species', editPlantPage.view);
 
 //adding to JSON
-app.get('/add', add.addEntry);
+//app.get('/add', add.addEntry);
+app.get('/plant/:plantName/add', froggy.addEntry);
 app.get('/addingPlant', addingPlant.addPlant);
 //end testing
 
